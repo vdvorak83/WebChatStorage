@@ -9,7 +9,7 @@ import java.util.Map;
 public class MainController {
 
     @RequestMapping("/")
-    public String mainPage(){
+    public String mainPage(Map<String,Object>map){
         return "main";
     }
 
