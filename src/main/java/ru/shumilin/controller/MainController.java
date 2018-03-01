@@ -9,8 +9,17 @@ import java.util.Map;
 public class MainController {
 
     @RequestMapping("/")
-    public String mainPage(Map<String,Object>map){
+    public String mainPage(Map<String,Object>model){
         return "main";
     }
 
+    @RequestMapping("/chat")
+    public String chatPage(Map<String,Object>model){
+        return "chatPage";
+    }
+
+    @RequestMapping("/storage")
+    public String storagePage(Map<String,Object> model){
+        return "storagePage";
+    }
 }

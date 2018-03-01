@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8"/>
-    <title>Web Chat Storage Application</title>
+    <title>Main page</title>
+    <style>
+        ul.navigationBar{
+            margin-left: 0px;
+            padding-left: 0px;
+            list-style: none;
+        }
+        .navigationBar li {
+            float: left;
+        }
+        ul.navigationBar a {
+            display: block;
+            width: 5em;
+            padding:10px;
+            margin: 0 5px;
+            background-color: #f4f4f4;
+            border: 1px dashed #333;
+            text-decoration: none;
+            color: #333;
+            text-align: center;
+        }
+        ul.navigationBar a:hover{
+            background-color: #333;
+            color: #f4f4f4;
+        }
+    </style>
 </head>
 <body>
-<div>
-    <h1>Hello world!</h1>
-</div>
+<ul class="navigationBar">
+    <li><a href="#">Main</a></li>
+    <li><a href="/storage">Storage</a></li>
+    <li><a href="/chat">Chat</a></li>
+    <li><a href="/contacts">Contacts</a></li>
+</ul>
 </body>
 </html>
