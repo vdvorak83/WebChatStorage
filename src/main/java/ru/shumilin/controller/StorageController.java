@@ -4,10 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import ru.shumilin.component.StorageComponent;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class StorageController {
@@ -21,8 +23,8 @@ public class StorageController {
     }
 
     @RequestMapping(value = "/storage/uploadFile",method = RequestMethod.POST)
-    public void uploadFile(){
-
+    public void uploadFile(Map<String,Object> model, @RequestParam(value = "filePath") String filePath){
+        storageComponent.uploadFileToStorage(filePath);
     }
 
     @RequestMapping(value = "/storage/downloadFile",method = RequestMethod.POST)

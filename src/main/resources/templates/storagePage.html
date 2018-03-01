@@ -5,23 +5,27 @@
 </head>
 <body>
 
-<div th:if="${message}">
-    <h2 th:text="${message}"/>
-</div>
-<div>
-    <form method="POST" enctype="multipart/form-data" action="/">
-        <table>
-            <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
-            <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
-        </table>
-    </form>
-</div>
-<div>
-    <ul>
-        <li th:each="file : ${files}">
-            <a th:href="${file}" th:text="${file}" />
-        </li>
-    </ul>
-</div>
+<!--<div th:if="${message}">-->
+    <!--<h2 th:text="${message}"/>-->
+<!--</div>-->
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <label for="pathFile">Choose file to upload</label>
+        <input type="file" id="pathFile" name="file"/>
+    </div>
+    <div>
+        <button class="ActionUploadFile">Upload</button>
+    </div>
+</form>
+<!--<div>-->
+    <!--<ul>-->
+        <!--<li th:each="file : ${files}">-->
+            <!--<a th:href="${file}" th:text="${file}" />-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+
+<script type="text/javascript"
+        src="/static/js/storage.js"></script>
 </body>
 </html>
