@@ -20,6 +20,7 @@ public class MainController {
 
     @RequestMapping("/storage")
     public String storagePage(Map<String,Object> model){
+        model.put("message","Upload files page, Hello just do it");
         return "storagePage";
     }
 }
