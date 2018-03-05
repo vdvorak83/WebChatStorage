@@ -1,4 +1,4 @@
-package ru.shumilin.component.storageComponent;
+package ru.shumilin.storage;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -8,7 +8,7 @@ public class StorageProperties {
     /**
      * Folder location for storing files
      */
-    private String location = "upload-dir";
+    private String location = "D:/Repos/storage";
 
     public String getLocation() {
         return location;

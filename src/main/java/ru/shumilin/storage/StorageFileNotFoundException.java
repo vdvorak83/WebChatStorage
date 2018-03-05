@@ -1,4 +1,4 @@
-package ru.shumilin.component.storageComponent;
+package ru.shumilin.storage;
 
 public class StorageFileNotFoundException extends StorageException {
 
