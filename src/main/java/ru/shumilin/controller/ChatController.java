@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Map;
 
 @Controller
-public class MainController {
-
-    @RequestMapping("/")
-    public String mainPage(Map<String,Object>model){
-        return "main";
+public class ChatController {
+    @RequestMapping("/chat")
+    public String chatPage(Map<String,Object> model){
+        return "chatPage";
     }
 }

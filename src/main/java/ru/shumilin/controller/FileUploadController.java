@@ -14,6 +14,8 @@ import ru.shumilin.storage.StorageFileNotFoundException;
 import ru.shumilin.storage.FileSystemStorageService;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Controller
@@ -32,7 +34,6 @@ public class FileUploadController {
                 path -> MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
                         "serveFile", path.getFileName().toString()).build().toString())
                 .collect(Collectors.toList()));
-        model.addAttribute("message","Storage files page, Hello, just do it");
         return "storagePage";
     }
 
@@ -55,6 +56,11 @@ public class FileUploadController {
 
         return "redirect:/storage";
     }
+//    @PostMapping("/storage/clearStorage")
+//    public String clearStorage(){
+//        storageService.deleteAll();
+//        return "redirect:/storage";
+//    }
 
     @ExceptionHandler(StorageFileNotFoundException.class)
     public ResponseEntity<?> handleStorageFileNotFound(StorageFileNotFoundException exc) {
