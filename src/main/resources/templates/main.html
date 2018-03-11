@@ -1,39 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Main page</title>
-    <style>
-        ul.navigationBar{
-            margin-left: 0px;
-            padding-left: 0px;
-            list-style: none;
-        }
-        .navigationBar li {
-            float: left;
-        }
-        ul.navigationBar a {
-            display: block;
-            width: 5em;
-            padding:10px;
-            margin: 0 5px;
-            background-color: #f4f4f4;
-            border: 1px dashed #333;
-            text-decoration: none;
-            color: #333;
-            text-align: center;
-        }
-        ul.navigationBar a:hover{
-            background-color: #333;
-            color: #f4f4f4;
-        }
-    </style>
+    <link rel="import" href="navigationBar.html"/>
 </head>
 <body>
-<ul class="navigationBar">
-    <li><a href="#">Main</a></li>
-    <li><a href="/storage">Storage</a></li>
-    <li><a href="/chat">Chat</a></li>
-    <li><a href="/contacts">Contacts</a></li>
-</ul>
+<script>
+    var link = document.querySelector('link[rel=import]');
+    var content = link.import.querySelector('.navbar');
+    document.body.appendChild(content.cloneNode(true));
+</script>
 </body>
 </html>
