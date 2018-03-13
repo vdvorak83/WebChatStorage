@@ -9,6 +9,6 @@ import java.util.Map;
 public class ChatController {
     @RequestMapping("/chat")
     public String chatPage(Map<String,Object> model){
-        return "chatPage";
+        return "chat";
     }
 }
