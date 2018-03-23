@@ -11,11 +11,22 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "login")
+    @Column(nullable = false, name = "login")
     private String login;
 
-    @Column(name = "password")
+    @Column(nullable = false, name = "password")
     private String password;
+
+    @Column(nullable = false, name = "username")
+    private String userName;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public Long getId() {
         return id;
